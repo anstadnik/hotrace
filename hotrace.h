@@ -6,7 +6,7 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:18:22 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/01 21:06:16 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/01 21:08:36 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@ typedef struct	s_tree t_tree;
 
 struct	s_tree
 {
+	char	letter;
 	char	*value;
 	t_tree	*right;
 	t_tree	*down;
