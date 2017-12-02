@@ -6,7 +6,7 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:18:22 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 15:03:45 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/02 15:43:24 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ struct	s_list
 **	Reads from stdin, fills t_table, returns NULL if Error occured
 */
 
-char	*fill_table(t_list	*table[TABLE_SIZE]);
+char	fill_table(t_list	*table[TABLE_SIZE]);
 
 /*
 **	Reads search queries, and prints value to standart output
