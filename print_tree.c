@@ -6,7 +6,7 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:43:28 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 16:22:36 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/02 16:43:00 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ void	print_results(t_tree *tree)
 		}
 		if (!cur)
 		{
-			ft_putstr(str);
-			ft_putendl(" Not found");
+			ft_putstr(str, 1);
+			ft_putendl(" Not found", 1);
 		}
 		else
 			ft_putendl(cur->value);
