@@ -6,7 +6,7 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:18:22 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 16:39:00 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/02 16:56:59 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,9 @@ char	print_hash(t_table *table[TABLE_SIZE]);
 
 void	clean_table(t_table *table[TABLE_SIZE]);
 
+
+void					ft_putstr_fd(char const *s, int fd);
+void					ft_putendl_fd(char const *s, int fd);
 char					*ft_strchr(const char *s, int c);
 size_t					ft_strlen(const char *s);
 char					*ft_strsub(char const *s, unsigned int start, size_t len);
