@@ -1,38 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_tree.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/01 20:43:28 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 14:54:21 by astadnik         ###   ########.fr       */
+/*   Created: 2017/12/02 14:54:43 by astadnik          #+#    #+#             */
+/*   Updated: 2017/12/02 14:54:47 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	print_results(t_tree *tree)
+int	main(void)
 {
-	char	*str;
-	size_t	i;
-	t_tree	*cur;
+	t_tree	*tree;
 
-	while (get_next_line(0, &str) && (cur = tree))
+	if (!(tree = fill_tree()))
 	{
-		i = 0;
-		while (str[i])
-		{
-			while (cur && cur->name != str[i])
-				cur = cur->right;
-			if (!cur || !str[++i])
-				break ;
-			cur = cur->down;
-		}
-		if (!cur)
-		{
-			ft_putstr(str);
-			ft_putendl(" Not found");
-		}
-		else
-			ft_putendl(cur->value);
+		ft_putendl_fd("Error", 2);
+		return (0);
 	}
+	print_rezults(tree);
+	clean_tree(tree);
+	return (0);
 }
