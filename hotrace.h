@@ -6,7 +6,7 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:18:22 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 16:56:59 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/02 17:22:24 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct			s_list
 	struct s_list	*next;
 }						t_list;
 
+size_t	hash(const char *str);
 /*
 **	Reads from stdin, fills t_table, returns NULL if Error occured
 */
