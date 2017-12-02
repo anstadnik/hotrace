@@ -6,7 +6,7 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/02 15:46:50 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 16:51:41 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/02 18:28:16 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	fill_table(t_table	*table[TABLE_SIZE])
 		cur = &table[hash(str)];
 		while (*cur)
 			cur = &(*cur)->next;
-		if (!(cur = malloc(sizeof(t_table))))
+		if (!(*cur = malloc(sizeof(t_table))))
 			return (-1);
 		(*cur)->next = NULL;
 		(*cur)->key = str;

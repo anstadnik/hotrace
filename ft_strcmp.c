@@ -6,7 +6,7 @@
 /*   By: astadnik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/23 15:24:14 by astadnik          #+#    #+#             */
-/*   Updated: 2017/11/09 13:14:37 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/02 17:29:24 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 ** terminated strings s1 and s2.
 */
 
-#include "libft.h"
+#include "hotrace.h"
 
 int	ft_strcmp(char const *s1, char const *s2)
 {

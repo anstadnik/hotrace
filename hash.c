@@ -6,18 +6,19 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/02 17:20:40 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 17:22:33 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/02 17:56:38 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "hotrace.h"
 
 size_t	hash(const char *str)
 {
     size_t	hash = 5381;
-    int c;
 
-    while (c = *str++)
-        hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
+    while (*str)
+        hash = ((hash << 5) + hash) + (size_t)*str++; /* hash * 33 + c */
 
-    return hash;
+    return (hash % TABLE_SIZE);
 
 }

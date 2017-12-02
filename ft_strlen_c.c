@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlen_c.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
+/*   By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/02 14:51:25 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 18:38:55 by astadnik         ###   ########.fr       */
+/*   Created: 2017/11/05 16:25:21 by ahrytsen          #+#    #+#             */
+/*   Updated: 2017/12/02 16:36:15 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hotrace.h"
 
-int	main(void)
+size_t	ft_strlen_c(char const *s, char c)
 {
-	t_table	*table[TABLE_SIZE];
-	size_t	i;
+	size_t res;
 
-	i = 0;
-	while (i < TABLE_SIZE)
-		table[i++] = NULL;
-	if (fill_table(table) != 1 || print_hash(table) == -1)
+	res = 0;
+	while (*s && *s != c)
 	{
-		clean_table(table);
-		ft_putendl_fd("Error", 2);
-		return (0);
+		s++;
+		res++;
 	}
-	clean_table(table);
-	return (0);
+	return (res);
 }

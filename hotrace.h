@@ -6,13 +6,14 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:18:22 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 17:22:24 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/02 17:39:31 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HOTRACE_H
 # define HOTRACE_H
 # define TABLE_SIZE 500000
+# define BUFF_SIZE 32
 # include <unistd.h>
 # include <stdlib.h>
 
@@ -51,7 +52,12 @@ char	print_hash(t_table *table[TABLE_SIZE]);
 
 void	clean_table(t_table *table[TABLE_SIZE]);
 
-
+void	ft_bzero(void *s, size_t n);
+void	*ft_memset(void *b, int c, size_t len);
+void	*ft_memalloc(size_t size);
+char	*ft_strnew(size_t size);
+int						ft_strcmp(char const *s1, char const *s2);
+void					ft_putchar_fd(char c, int fd);
 void					ft_putstr_fd(char const *s, int fd);
 void					ft_putendl_fd(char const *s, int fd);
 char					*ft_strchr(const char *s, int c);
