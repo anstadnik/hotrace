@@ -6,7 +6,7 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:43:28 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 16:49:32 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/02 16:53:37 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	print_tree(t_tree *tree)
 		i = 0;
 		while (str[i])
 		{
-			while (cur && cur->value != str[i])
+			while (cur && cur->letter != str[i])
 				cur = cur->right;
 			if (!cur || !str[++i])
 				break ;
