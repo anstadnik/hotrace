@@ -6,7 +6,7 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/02 15:01:19 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 15:25:44 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/02 15:55:25 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@ void	print_results(t_list *table[TABLE_SIZE])
 {
 	char	*str;
 	t_list	*list;
+	char
 
 	while (get_next_line(0, &str))
 	{
