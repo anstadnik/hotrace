@@ -6,7 +6,7 @@
 /*   By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:43:43 by ahrytsen          #+#    #+#             */
-/*   Updated: 2017/12/02 18:02:28 by ahrytsen         ###   ########.fr       */
+/*   Updated: 2017/12/02 18:35:50 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static int		save_value(t_tree **head, char *keyword, char *value)
 	return (0);
 }
 
-t_tree			*fill_tree()
+t_tree			*fill_tree(void)
 {
 	t_tree	*head;
 	int		gnl_res;
@@ -54,7 +54,7 @@ t_tree			*fill_tree()
 	char	*value;
 
 	head = NULL;
-	while((gnl_res = get_next_line(0, &keyword)) && *keyword)
+	while ((gnl_res = get_next_line(0, &keyword)) && *keyword)
 	{
 		if (gnl_res == -1)
 			return (NULL);

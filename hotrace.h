@@ -6,7 +6,7 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:18:22 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 16:47:21 by ahrytsen         ###   ########.fr       */
+/*   Updated: 2017/12/02 18:36:50 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ void					ft_putendl_fd(char const *s, int fd);
 char					*ft_strnew(size_t size);
 char					*ft_strchr(const char *s, int c);
 size_t					ft_strlen(const char *s);
-char					*ft_strsub(char const *s, unsigned int start, size_t len);
+char					*ft_strsub(char const *s,
+								unsigned int start, size_t len);
 char					*ft_strjoin(char const *s1, char const *s2);
 size_t					ft_strlen_c(char const *s, char c);
 void					ft_lstadd_end(t_list **alst, t_list *new);
