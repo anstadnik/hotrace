@@ -6,11 +6,16 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:18:22 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/01 21:08:36 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/02 14:53:57 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-typedef struct	s_tree t_tree;
+#ifndef HOTRACE_H
+# define HOTRACE_H
+# include <unistd.h>
+# include <stdlib.h>
+
+typedef struct s_tree	t_tree;
 
 struct	s_tree
 {
@@ -37,3 +42,5 @@ void	print_results(t_tree *tree);
 */
 
 void	clean_tree(t_tree *tree);
+
+#endif
