@@ -6,12 +6,20 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:18:22 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/01 21:08:36 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/02 15:28:54 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 typedef struct	s_tree t_tree;
 
+typedef structs_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}		t_list;
+
+}
 struct	s_tree
 {
 	char	letter;
