@@ -6,14 +6,14 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:18:22 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 17:39:31 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/02 19:40:36 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HOTRACE_H
 # define HOTRACE_H
 # define TABLE_SIZE 500000
-# define BUFF_SIZE 32
+# define BUFF_SIZE 1000000
 # include <unistd.h>
 # include <stdlib.h>
 
