@@ -6,7 +6,7 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/02 14:51:25 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 14:51:35 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/02 14:59:24 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	main(void)
 {
-	t_tree	*tree;
+	t_table	table[TABLE_SIZE];
 
-	if (!(tree = fill_tree()))
+	if (!fill_table(table))
 	{
 		ft_putendl_fd("Error", 2);
 		return (0);
 	}
-	print_rezults(tree);
-	clean_tree(tree);
+	print_rezults(table);
+	clean_table(table);
 	return (0);
 }
