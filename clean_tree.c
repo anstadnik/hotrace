@@ -6,9 +6,11 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 21:26:03 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/01 21:26:58 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/02 16:30:50 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "hotrace.h"
 
 void	clean_tree(t_tree *tree)
 {
