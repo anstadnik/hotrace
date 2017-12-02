@@ -6,13 +6,15 @@
 /*   By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:43:43 by ahrytsen          #+#    #+#             */
-/*   Updated: 2017/12/02 16:12:09 by ahrytsen         ###   ########.fr       */
+/*   Updated: 2017/12/02 16:38:10 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static t_tree	new_node(char k)
+#include "hotrace.h"
+
+static t_tree	*new_node(char k)
 {
-	t_tree new_node;
+	t_tree *new_node;
 
 	if (!(new_node = (t_tree*)malloc(sizeof(t_tree))))
 		return (NULL);
@@ -25,11 +27,6 @@ static t_tree	new_node(char k)
 
 static int		save_value(t_tree **head, char *keyword, char *value)
 {
-	t_tree *prev;
-	int		prev_direct;
-
-	prev
-	prev = NULL;
 	if (!*head)
 		if (!(*head = new_node(*keyword++)))
 				return (1);
@@ -37,7 +34,7 @@ static int		save_value(t_tree **head, char *keyword, char *value)
 	{
 		if (!*head)
 		{
-			if (!(head = &new_node(*keyword)))
+			if (!(head = new_node(*keyword)))
 				return (1);
 		}
 		else if ((*head)->letter == *keyword && *(keyword + 1))
@@ -65,6 +62,7 @@ t_tree			*fill_tree()
 		if (gnl_res == -1 || !gnl_res)
 			return (NULL);
 		save_value(&head, keyword, value);
+		free(keyword);
 	}
 	return (head);
 }

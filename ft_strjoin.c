@@ -6,11 +6,11 @@
 /*   By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/01 14:47:51 by ahrytsen          #+#    #+#             */
-/*   Updated: 2017/11/04 14:39:46 by ahrytsen         ###   ########.fr       */
+/*   Updated: 2017/12/02 16:24:06 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "hotrace.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
