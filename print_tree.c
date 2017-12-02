@@ -6,7 +6,7 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:43:28 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 19:18:01 by ahrytsen         ###   ########.fr       */
+/*   Updated: 2017/12/02 21:02:34 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	print_tree(t_tree *tree)
 				break ;
 			cur = cur->down;
 		}
-		if (!cur)
+		if (!cur || !cur->value)
 		{
 			ft_putstr_fd(str, 1);
 			ft_putendl_fd(" Not found.", 1);
