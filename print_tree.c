@@ -6,13 +6,13 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:43:28 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 16:43:00 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/02 16:48:37 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hotrace.h"
 
-void	print_results(t_tree *tree)
+void	print_tree(t_tree *tree)
 {
 	char	*str;
 	size_t	i;
@@ -31,8 +31,8 @@ void	print_results(t_tree *tree)
 		}
 		if (!cur)
 		{
-			ft_putstr(str, 1);
-			ft_putendl(" Not found", 1);
+			ft_putstr_fd(str, 1);
+			ft_putendl_fd(" Not found", 1);
 		}
 		else
 			ft_putendl(cur->value);
