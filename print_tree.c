@@ -6,9 +6,11 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:43:28 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 14:54:21 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/02 16:22:36 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "hotrace.h"
 
 void	print_results(t_tree *tree)
 {
@@ -21,7 +23,7 @@ void	print_results(t_tree *tree)
 		i = 0;
 		while (str[i])
 		{
-			while (cur && cur->name != str[i])
+			while (cur && cur->value != str[i])
 				cur = cur->right;
 			if (!cur || !str[++i])
 				break ;

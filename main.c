@@ -6,9 +6,11 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/02 14:54:43 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 14:54:47 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/02 16:19:31 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "hotrace.h"
 
 int	main(void)
 {
@@ -19,7 +21,7 @@ int	main(void)
 		ft_putendl_fd("Error", 2);
 		return (0);
 	}
-	print_rezults(tree);
+	print_tree(tree);
 	clean_tree(tree);
 	return (0);
 }
