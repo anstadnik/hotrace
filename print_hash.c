@@ -6,17 +6,19 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/02 15:01:19 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 15:55:25 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/02 16:31:52 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	print_results(t_list *table[TABLE_SIZE])
+#include "hotrace.h"
+
+char	print_hash(t_table *table[TABLE_SIZE])
 {
 	char	*str;
-	t_list	*list;
-	char
+	t_table	*list;
+	char	ret;
 
-	while (get_next_line(0, &str))
+	while ((ret = get_next_line(0, &str)) == 1)
 	{
 		list = table[hash(str)];
 		while (list && ft_strcmp(list->key, str) != 0)
@@ -29,4 +31,5 @@ void	print_results(t_list *table[TABLE_SIZE])
 			ft_putendl(" Not found.");
 		}
 	}
+	return (ret);
 }

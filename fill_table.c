@@ -6,13 +6,15 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/02 15:46:50 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 16:16:42 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/02 16:32:30 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	fill_table(t_list	*table[TABLE_SIZE])
+#include "hotrace.h"
+
+char	fill_table(t_table	*table[TABLE_SIZE])
 {
-	t_list	**cur;
+	t_table	**cur;
 	char	*str;
 	char	ret;
 
@@ -23,7 +25,7 @@ char	fill_table(t_list	*table[TABLE_SIZE])
 		cur = &table[hash(str)];
 		while (*cur)
 			cur = &(*cur)->next;
-		if (!cur = malloc(sizeof(t_list)))
+		if (!cur = malloc(sizeof(t_table)))
 			return (-1);
 		cur->next = NULL;
 		cur->key = str;

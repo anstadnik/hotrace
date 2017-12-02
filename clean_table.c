@@ -6,10 +6,11 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/02 15:32:22 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 15:39:54 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/02 16:29:47 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "hotrace.h"
 
 void	clean_table(t_table *table[TABLE_SIZE])
 {
