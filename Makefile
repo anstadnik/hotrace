@@ -6,7 +6,7 @@
 #    By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/03 20:19:57 by ahrytsen          #+#    #+#              #
-#    Updated: 2017/12/02 18:33:29 by ahrytsen         ###   ########.fr        #
+#    Updated: 2017/12/02 18:52:07 by astadnik         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -23,7 +23,7 @@ all: $(SRC) $(NAME)
 $(NAME): $(OBJ) $(HDR)
 	gcc -Wall -Wextra -Werror -o $(NAME) $(OBJ)
 
-.c.o:
+%.o: %.c
 	gcc -Wall -Wextra -Werror -c $<
 
 clean:
@@ -32,6 +32,7 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean all
+re: 
+	$(MAKE) fclean
+	$(MAKE) all
 
-.NOTEPARALLEL: all $(NAME) re
