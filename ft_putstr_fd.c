@@ -1,30 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   clean_table.c                                      :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
+/*   By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/02 15:32:22 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 16:37:51 by astadnik         ###   ########.fr       */
+/*   Created: 2017/11/02 12:25:19 by ahrytsen          #+#    #+#             */
+/*   Updated: 2017/12/02 16:21:59 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hotrace.h"
 
-void	clean_table(t_table *table[TABLE_SIZE])
+void	ft_putstr_fd(char const *s, int fd)
 {
-	size_t	i;
-	t_table	*tmp;
-
-	i = 0;
-	while (i < TABLE_SIZE)
-	{
-		while ((tmp = table[TABLE_SIZE]))
-		{
-			table[TABLE_SIZE] = table[TABLE_SIZE]->next;
-			free(tmp);
-		}
-		i++;
-	}
+	if (s)
+		write(fd, s, ft_strlen(s));
 }

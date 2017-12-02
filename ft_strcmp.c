@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   clean_table.c                                      :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
+/*   By: astadnik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/02 15:32:22 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 16:37:51 by astadnik         ###   ########.fr       */
+/*   Created: 2017/10/23 15:24:14 by astadnik          #+#    #+#             */
+/*   Updated: 2017/11/09 13:14:37 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hotrace.h"
+/*
+** Lexicographically compare the null-
+** terminated strings s1 and s2.
+*/
 
-void	clean_table(t_table *table[TABLE_SIZE])
+#include "libft.h"
+
+int	ft_strcmp(char const *s1, char const *s2)
 {
 	size_t	i;
-	t_table	*tmp;
 
 	i = 0;
-	while (i < TABLE_SIZE)
-	{
-		while ((tmp = table[TABLE_SIZE]))
-		{
-			table[TABLE_SIZE] = table[TABLE_SIZE]->next;
-			free(tmp);
-		}
+	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
 		i++;
-	}
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

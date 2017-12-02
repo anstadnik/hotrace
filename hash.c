@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   clean_table.c                                      :+:      :+:    :+:   */
+/*   hash.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/02 15:32:22 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 16:37:51 by astadnik         ###   ########.fr       */
+/*   Created: 2017/12/02 17:20:40 by astadnik          #+#    #+#             */
+/*   Updated: 2017/12/02 17:22:33 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hotrace.h"
-
-void	clean_table(t_table *table[TABLE_SIZE])
+size_t	hash(const char *str)
 {
-	size_t	i;
-	t_table	*tmp;
+    size_t	hash = 5381;
+    int c;
 
-	i = 0;
-	while (i < TABLE_SIZE)
-	{
-		while ((tmp = table[TABLE_SIZE]))
-		{
-			table[TABLE_SIZE] = table[TABLE_SIZE]->next;
-			free(tmp);
-		}
-		i++;
-	}
+    while (c = *str++)
+        hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
+
+    return hash;
+
 }

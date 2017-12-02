@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   clean_table.c                                      :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
+/*   By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/02 15:32:22 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 16:37:51 by astadnik         ###   ########.fr       */
+/*   Created: 2017/11/02 13:23:08 by ahrytsen          #+#    #+#             */
+/*   Updated: 2017/12/02 16:21:03 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hotrace.h"
 
-void	clean_table(t_table *table[TABLE_SIZE])
+void	ft_putendl_fd(char const *s, int fd)
 {
-	size_t	i;
-	t_table	*tmp;
-
-	i = 0;
-	while (i < TABLE_SIZE)
-	{
-		while ((tmp = table[TABLE_SIZE]))
-		{
-			table[TABLE_SIZE] = table[TABLE_SIZE]->next;
-			free(tmp);
-		}
-		i++;
-	}
+	if (!s)
+		return ;
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
