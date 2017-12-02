@@ -6,34 +6,40 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:18:22 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/01 21:08:36 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/02 14:50:43 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-typedef struct	s_tree t_tree;
+#ifndef HOTRACE_H
+# define HOTRACE_H
+# define TABLE_SIZE 500000
+# include <unistd.h>
+# include <stdlib.h>
 
-struct	s_tree
+typedef struct s_list	t_list;
+
+struct	s_list
 {
-	char	letter;
 	char	*value;
-	t_tree	*right;
-	t_tree	*down;
+	t_list	*next;
 };
 
 /*
-**	Reads from stdin, fills t_tree, returns NULL if Error occured
+**	Reads from stdin, fills t_table, returns NULL if Error occured
 */
 
-t_tree	*fill_tree();
+char	*fill_table(t_list	*table);
 
 /*
 **	Reads search queries, and prints value to standart output
 */
 
-void	print_results(t_tree *tree);
+void	print_results(t_list *table);
 
 /*
-**	Frees every branch of the tree
+**	Frees every branch of the table
 */
 
-void	clean_tree(t_tree *tree);
+void	clean_table(t_table *table);
+
+#endif

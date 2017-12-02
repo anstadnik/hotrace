@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   clean_tree.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/01 21:26:03 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/01 21:26:58 by astadnik         ###   ########.fr       */
+/*   Created: 2017/12/02 14:51:25 by astadnik          #+#    #+#             */
+/*   Updated: 2017/12/02 14:51:35 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	clean_tree(t_tree *tree)
+#include "hotrace.h"
+
+int	main(void)
 {
-	if (!tree)
-		return ;
-	clean_tree(tree->right);
-	clean_tree(tree->down);
-	free(tree->value);
-	free(tree);
+	t_tree	*tree;
+
+	if (!(tree = fill_tree()))
+	{
+		ft_putendl_fd("Error", 2);
+		return (0);
+	}
+	print_rezults(tree);
+	clean_tree(tree);
+	return (0);
 }
