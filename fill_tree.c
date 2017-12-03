@@ -6,7 +6,7 @@
 /*   By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:43:43 by ahrytsen          #+#    #+#             */
-/*   Updated: 2017/12/03 14:19:10 by ahrytsen         ###   ########.fr       */
+/*   Updated: 2017/12/03 14:27:27 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ static int		save_value(t_tree **head, char *keyword, char *value)
 		head = &(*head)->symbols[(int)*keyword];
 			keyword++;
 	}
+	if (!*head)
+		*head = new_node();
 	(*head)->value = value;
 	return (0);
 }

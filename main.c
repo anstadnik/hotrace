@@ -6,7 +6,7 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/02 14:54:43 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/03 14:01:22 by ahrytsen         ###   ########.fr       */
+/*   Updated: 2017/12/03 14:29:10 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main(void)
 		ft_putendl_fd("Error", 2);
 		return (1);
 	}
-//	print_tree(tree);
-//	clean_tree(tree);
+	print_tree(tree);
+	clean_tree(tree);
 	return (0);
 }
