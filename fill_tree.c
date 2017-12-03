@@ -6,19 +6,20 @@
 /*   By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:43:43 by ahrytsen          #+#    #+#             */
-/*   Updated: 2017/12/03 13:26:13 by ahrytsen         ###   ########.fr       */
+/*   Updated: 2017/12/03 14:19:10 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hotrace.h"
 
-static t_tree	*new_node(char k)
+static t_tree	*new_node(void)
 {
 	t_tree *new_node;
 
 	if (!(new_node = (t_tree*)ft_memalloc(sizeof(t_tree))))
 		return (NULL);
-	new_node->letter = k;
+	if (!(new_node->symbols = (t_tree**)ft_memalloc(sizeof(t_tree*) * 128)))
+		return (NULL);
 	return (new_node);
 }
 
@@ -27,20 +28,9 @@ static int		save_value(t_tree **head, char *keyword, char *value)
 	while (*keyword)
 	{
 		if (!*head)
-		{
-			if (!(*head = new_node(*keyword)))
-				return (1);
-			if (!*(keyword + 1))
-				break ;
-		}
-		else if ((*head)->letter == *keyword)
-		{
-			if (*(keyword + 1))
-				head = &(*head)->down;
+			*head = new_node();
+		head = &(*head)->symbols[(int)*keyword];
 			keyword++;
-		}
-		else
-			head = &(*head)->right;
 	}
 	(*head)->value = value;
 	return (0);

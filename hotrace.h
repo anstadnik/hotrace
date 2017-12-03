@@ -6,7 +6,7 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:18:22 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 18:36:50 by ahrytsen         ###   ########.fr       */
+/*   Updated: 2017/12/03 13:54:56 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,8 @@ typedef struct s_tree	t_tree;
 
 struct					s_tree
 {
-	char	letter;
 	char	*value;
-	t_tree	*right;
-	t_tree	*down;
+	t_tree	**symbols;
 };
 
 void					*ft_memset(void *b, int c, size_t len);

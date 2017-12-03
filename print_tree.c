@@ -6,7 +6,7 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:43:28 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 21:37:20 by ahrytsen         ###   ########.fr       */
+/*   Updated: 2017/12/03 14:21:09 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,15 @@
 
 void	print_tree(t_tree *tree)
 {
+	t_tree	*cur;
 	char	*str;
 	size_t	i;
-	t_tree	*cur;
 
 	while (get_next_line(0, &str) && (cur = tree))
 	{
 		i = 0;
-		while (str[i])
-		{
-			while (cur && cur->letter != str[i])
-				cur = cur->right;
-			if (!cur || !str[++i])
-				break ;
-			cur = cur->down;
-		}
+		while (str[i] && cur)
+			cur = cur->symbols[(int)str[i++]];
 		if (!cur || !cur->value)
 		{
 			ft_putstr_fd(str, 1);
@@ -39,3 +33,13 @@ void	print_tree(t_tree *tree)
 		free(str);
 	}
 }
+
+
+
+
+
+
+
+
+
+
