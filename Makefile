@@ -6,7 +6,7 @@
 #    By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/03 20:19:57 by ahrytsen          #+#    #+#              #
-#    Updated: 2017/12/02 18:52:07 by astadnik         ###   ########.fr        #
+#    Updated: 2017/12/03 14:58:48 by astadnik         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -21,10 +21,10 @@ HDR		= hotrace.h
 all: $(SRC) $(NAME)
 
 $(NAME): $(OBJ) $(HDR)
-	gcc -Wall -Wextra -Werror -o $(NAME) $(OBJ)
+	gcc -Wall -Wextra -Werror -O3 -o $(NAME) $(OBJ)
 
 %.o: %.c
-	gcc -Wall -Wextra -Werror -c $<
+	gcc -Wall -Wextra -Werror -O3 -c $<
 
 clean:
 	rm -f $(OBJ)
