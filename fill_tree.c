@@ -6,21 +6,11 @@
 /*   By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:43:43 by ahrytsen          #+#    #+#             */
-/*   Updated: 2017/12/03 13:26:13 by ahrytsen         ###   ########.fr       */
+/*   Updated: 2017/12/03 13:54:03 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hotrace.h"
-
-static t_tree	*new_node(char k)
-{
-	t_tree *new_node;
-
-	if (!(new_node = (t_tree*)ft_memalloc(sizeof(t_tree))))
-		return (NULL);
-	new_node->letter = k;
-	return (new_node);
-}
 
 static int		save_value(t_tree **head, char *keyword, char *value)
 {
@@ -28,8 +18,9 @@ static int		save_value(t_tree **head, char *keyword, char *value)
 	{
 		if (!*head)
 		{
-			if (!(*head = new_node(*keyword)))
+			if (!(*head = (t_tree*)ft_memalloc(sizeof(t_tree))))
 				return (1);
+			(*head)->letter = *keyword;
 			if (!*(keyword + 1))
 				break ;
 		}
