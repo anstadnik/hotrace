@@ -6,7 +6,7 @@
 /*   By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:43:43 by ahrytsen          #+#    #+#             */
-/*   Updated: 2017/12/03 13:26:13 by ahrytsen         ###   ########.fr       */
+/*   Updated: 2017/12/03 15:00:51 by astadnik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ t_tree			*fill_tree(void)
 		if (!*keyword)
 		{
 			free(keyword);
-			break;
+			break ;
 		}
 		gnl_res = get_next_line(0, &value);
 		if (gnl_res == -1 || !gnl_res)
