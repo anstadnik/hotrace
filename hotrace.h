@@ -6,7 +6,7 @@
 /*   By: astadnik <astadnik@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:18:22 by astadnik          #+#    #+#             */
-/*   Updated: 2017/12/02 18:36:50 by ahrytsen         ###   ########.fr       */
+/*   Updated: 2017/12/03 17:28:12 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,21 +34,13 @@ struct					s_tree
 	t_tree	*down;
 };
 
-void					*ft_memset(void *b, int c, size_t len);
-void					*ft_memalloc(size_t size);
-void					ft_bzero(void *s, size_t n);
-void					ft_putchar_fd(char c, int fd);
+size_t					ft_strlen(const char *s);
 void					ft_putstr_fd(char const *s, int fd);
 void					ft_putendl_fd(char const *s, int fd);
-char					*ft_strnew(size_t size);
-char					*ft_strchr(const char *s, int c);
-size_t					ft_strlen(const char *s);
 char					*ft_strsub(char const *s,
 								unsigned int start, size_t len);
 char					*ft_strjoin(char const *s1, char const *s2);
-size_t					ft_strlen_c(char const *s, char c);
-void					ft_lstadd_end(t_list **alst, t_list *new);
-int						get_next_line(const int fd, char **line);
+int						get_next_line(char **line);
 /*
 **	Reads from stdin, fills t_tree, returns NULL if Error occured
 */
@@ -68,3 +60,4 @@ void					print_tree(t_tree *tree);
 void					clean_tree(t_tree *tree);
 
 #endif
+

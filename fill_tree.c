@@ -6,7 +6,7 @@
 /*   By: ahrytsen <ahrytsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 20:43:43 by ahrytsen          #+#    #+#             */
-/*   Updated: 2017/12/03 15:00:51 by astadnik         ###   ########.fr       */
+/*   Updated: 2017/12/03 17:33:55 by ahrytsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ static t_tree	*new_node(char k)
 	if (!(new_node = (t_tree*)ft_memalloc(sizeof(t_tree))))
 		return (NULL);
 	new_node->letter = k;
+	new_node->right = NULL;
 	return (new_node);
 }
 
